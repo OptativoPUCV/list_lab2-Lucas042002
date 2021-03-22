@@ -39,13 +39,14 @@ List * createList() {
 
 void * firstList(List * list) {
     int *dato = (int*) list->head->data;
+    list->current = list->head;
     return dato;
 
 }
 
 void * nextList(List * list) {
-    //list->current->prev = list->current->next;
-    //list->current->next = list->current->next->next;
+    list->current->prev = list->current->next;
+    list->current->next = list->current->next->next;
     list->current->data = list->current->next->data;
     int *dato = (int*) list->current->data;
     return dato;
