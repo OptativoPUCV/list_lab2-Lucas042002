@@ -38,15 +38,16 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-    //int *dato = (int*) list->head->data;
+    int *dato = (int*) list->head->data;
     list->current = list->head;
-    return popCurrent(list);
+    return dato;
 
 }
 
 void * nextList(List * list) {
+    int *dato = (int*) list->current->data;
     list->current = list->current->next;
-    return popCurrent(list);
+    return dato;
 }
 
 void * lastList(List * list) {
