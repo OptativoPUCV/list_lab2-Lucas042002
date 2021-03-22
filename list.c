@@ -49,7 +49,8 @@ void * nextList(List * list) {
     list->current->data = list->current->next->data;
     list->current->next = list->current->next->next;
     int *dato = (int*) list->current->data;
-    return dato;
+    printf("%d",*dato);
+    return NULL;
 }
 
 void * lastList(List * list) {
