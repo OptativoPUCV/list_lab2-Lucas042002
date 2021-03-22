@@ -38,7 +38,8 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-    printf("%p", list->head->data);
+    int *dato = (int*) list->head->data;
+    printf("%d\n", *dato);
     
     return NULL;
 
