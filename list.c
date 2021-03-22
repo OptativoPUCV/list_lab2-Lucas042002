@@ -45,9 +45,9 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    list->current->prev = list->current->next;
-    list->current->data = list->current->next->data;
-    list->current->next = list->current->next->next;
+    list->current->prev = list->head->next;
+    list->current->data = list->head->next->data;
+    list->current->next = list->head->next->next;
     int *dato = (int*) list->current->data;
     
     printf("dato = %d",*dato);
