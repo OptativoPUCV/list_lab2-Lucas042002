@@ -45,7 +45,8 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    return NULL;
+    list->current = list->current->next;
+    return popCurrent(list);
 }
 
 void * lastList(List * list) {
