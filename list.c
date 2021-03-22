@@ -38,6 +38,7 @@ List * createList() {
 }
 
 void * firstList(List * list) {
+    if (!list->head) return NULL;
     int *dato = (int*) list->head->data;
     list->current = list->head;
     return dato;
