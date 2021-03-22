@@ -39,7 +39,7 @@ List * createList() {
 
 void * firstList(List * list) {
     int *dato = (int*) list->head->data;
-    
+    list->current = list->head;
     
     return dato;
 
