@@ -39,9 +39,9 @@ List * createList() {
 
 void * firstList(List * list) {
     int *dato = (int*) list->head->data;
-    printf("%d\n", *dato);
     
-    return NULL;
+    
+    return dato;
 
 }
 
