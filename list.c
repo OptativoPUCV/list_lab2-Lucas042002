@@ -49,7 +49,7 @@ void * nextList(List * list) {
     list->current->data = list->current->next->data;
     list->current->next = list->current->next->next;
     int *dato = (int*) list->current->data;
-    printf("%d",*dato);
+    printf("dato = %d",*dato);
     return NULL;
 }
 
