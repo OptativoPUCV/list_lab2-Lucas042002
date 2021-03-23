@@ -48,15 +48,15 @@ void * firstList(List * list) {
 void * nextList(List * list) {
     list->current->prev = list->current->next;
     list->current->data = list->current->next->data;
-    
-    int *dato = (int*) list->current->data;
     list->current->next = list->current->next->next;
+    int *dato = (int*) list->current->data;
+    
     //printf("dato = %d",*dato);
     return dato;
 }
 
 void * lastList(List * list) {
-    if (!list->head) return NULL;
+    if (!list->tail) return NULL;
     int *dato = (int*) list->tail->data;
     list->current = list->tail;
     return dato;
