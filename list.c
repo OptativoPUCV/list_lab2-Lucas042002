@@ -95,9 +95,9 @@ void pushCurrent(List * list, const void * data) {
     Node * nuebo = createNode(data);
 
     if (list->current->next == NULL){
-      printf("aaaaaaaaaaaaaaaaa");
       list->tail->next = nuebo;
       nuebo->prev = list->tail;
+      list->tail = nuebo;
     }
     nuebo->next = list->current->next;
     list->current->next->prev = nuebo;
