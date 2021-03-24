@@ -119,9 +119,17 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
     int *dato = (int*) list->current->data;
-    printf("dato = %d", *dato);
+    if (list->current->prev == NULL){
+      free(list->current);
+      return dato;
+    }
+    if (list->current->next == NULL){
+      free(list->current);
+      return dato;
+    }
+
     
-    return dato;
+    return NULL;
 }
 
 void cleanList(List * list) {
