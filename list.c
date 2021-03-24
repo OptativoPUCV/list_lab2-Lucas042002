@@ -46,7 +46,7 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    if (list->current->next != NULL){
+    if (list->current->next != NULL && list->current != NULL){
       list->current = list->current->next;
       int *dato = (int*) list->current->data;
       return dato;
