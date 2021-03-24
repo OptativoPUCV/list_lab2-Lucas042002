@@ -82,6 +82,7 @@ void pushFront(List * list, const void * data) {
         list->head->prev = aux;
     list->head = aux;
     aux->prev = NULL;
+    printf("akakakak");
     if (list->tail == NULL)
       list->tail = list->head->next;
     
