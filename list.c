@@ -78,9 +78,9 @@ void * prevList(List * list) {
 void pushFront(List * list, const void * data) {
     Node * aux = createNode(data);
     list->current = aux;
-    int *dato = (int*) list->head->prev->data;
-    printf("%d\n", *dato);
-
+    int *dato = (int*) list->current->data;
+    printf("%d", *dato);
+    if (list->current->prev->data == NULL) printf("ESTA NULL");
 
     
 }
