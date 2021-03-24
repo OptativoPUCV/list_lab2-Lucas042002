@@ -100,7 +100,7 @@ void pushCurrent(List * list, const void * data) {
     }
 
     list->current->next = nuebo;
-    int *dato = (int*) list->current->data;
+    int *dato = (int*) list->current->next->data;
     printf ("dato = %d", *dato);
     nuebo->prev = list->current;
 }
