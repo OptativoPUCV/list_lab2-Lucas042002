@@ -119,17 +119,17 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
     
-    if (list->current->prev == NULL){
+    /*if (list->current->prev == NULL){
       free(list->current);
       return NULL;
     }
     if (list->current->next == NULL){
       free(list->current);
       return NULL;
-    }
-
-    
-    return NULL;
+    }*/
+    int a = 3;
+    int *dato = &a;
+    return dato;
 }
 
 void cleanList(List * list) {
