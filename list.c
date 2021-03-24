@@ -78,8 +78,9 @@ void * prevList(List * list) {
 void pushFront(List * list, const void * data) {
     Node * aux = createNode(data);
     list->current = aux;
-    int *dato = (int*) list->current->data;
+    int *dato = (int*) list->head->prev->data;
     printf("%d\n", *dato);
+
 
     
 }
