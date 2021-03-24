@@ -50,7 +50,7 @@ void * nextList(List * list) {
    
     
     //printf("dato = %d",*dato);
-    return (int*) list->current->data;
+    return  NULL;
 }
 
 void * lastList(List * list) {
