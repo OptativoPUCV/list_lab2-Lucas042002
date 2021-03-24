@@ -118,7 +118,14 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
+
     int *dato = (int*) list->current->data;
+
+    //Node *aux = list->current;
+
+    if (list->current->prev == NULL){
+      free (list->current);
+    }
     
 
     
