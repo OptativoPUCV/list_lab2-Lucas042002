@@ -79,7 +79,7 @@ void pushFront(List * list, const void * data) {
     Node * aux = createNode(data);
     list->current = aux;
     int *dato = (int*) list->current->data;
-    printf("%d", *dato);
+    printf("%d\n", *dato);
     
     
 }
