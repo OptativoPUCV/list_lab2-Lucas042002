@@ -80,7 +80,7 @@ void pushFront(List * list, const void * data) {
     list->current = aux;
     int *dato = (int*) list->current->data;
     printf("%d\n", *dato);
-    
+    list->head->prev = list->current;
     
 }
 
