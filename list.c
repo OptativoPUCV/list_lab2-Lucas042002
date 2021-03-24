@@ -121,10 +121,10 @@ void * popCurrent(List * list) {
 
     int *dato = (int*) list->current->data;
 
-    //Node *aux = list->current;
+    Node *aux = list->current;
 
     if (list->current->prev == NULL){
-      free (list->current);
+      free (aux);
     }
     
 
