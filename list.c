@@ -94,15 +94,16 @@ void pushBack(List * list, const void * data) {
 void pushCurrent(List * list, const void * data) {
     Node * nuebo = createNode(data);
 
-    if (list->current->next != NULL){
-      nuebo->next = list->current->next;
-      list->current->next->prev = nuebo;
+    if (list->current->next == NULL){
+      list->tail->next = nuebo;
+      nuebo->prev = list->tail;
     }
-
+    nuebo->next = list->current->next;
+    list->current->next->prev = nuebo;
     list->current->next = nuebo;
-    int *dato = (int*) list->current->data;
-    printf ("\ndato = %d\n", *dato);
     nuebo->prev = list->current;
+
+
 }
 
 void * popFront(List * list) {
