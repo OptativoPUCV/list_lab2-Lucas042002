@@ -58,7 +58,6 @@ void * nextList(List * list) {
 
 void * lastList(List * list) {
     if (!list->tail) return NULL;
-    
     list->current = list->tail;
     return (void *) list->tail->data;
 }
@@ -68,8 +67,7 @@ void * prevList(List * list) {
     if (list->current->prev != NULL ){
       
       list->current = list->current->prev;
-      int *dato = (int*) list->current->data;
-      return dato;
+      return (void *) list->current->data;
     }
     return NULL;
 }
@@ -119,7 +117,6 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-
     int *dato = (int*) list->current->data;
     
     Node *aux;
