@@ -39,7 +39,6 @@ List * createList() {
 
 void * firstList(List * list) {
     if (!list->head) return NULL;
-    //int *dato = (int*) list->head->data;
     list->current = list->head;
     return (void *) list->head->data;
 
@@ -50,8 +49,8 @@ void * nextList(List * list) {
     if (list->current->next != NULL ){
       
       list->current = list->current->next;
-      int *dato = (int*) list->current->data;
-      return dato;
+      return (void *) list->head->data;
+      
     }
     return NULL;
     
