@@ -39,9 +39,9 @@ List * createList() {
 
 void * firstList(List * list) {
     if (!list->head) return NULL;
-    int *dato = (int*) list->head->data;
+    //int *dato = (int*) list->head->data;
     list->current = list->head;
-    return dato;
+    return (void *) list->head->data;
 
 }
 
@@ -84,7 +84,7 @@ void pushFront(List * list, const void * data) {
     aux->prev = NULL;
     
     if (list->tail == NULL)
-      list->tail = aux;
+        list->tail = aux;
     
 }
 
